@@ -11,31 +11,32 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, class: 'form-control' %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :description %><br>
-    <%= f.text_area :description %>
+    <%= f.text_area :description, class: 'form-control' %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :bulk_quantity %><br>
-    <%= f.number_field :bulk_quantity %>
+    <%= f.number_field :bulk_quantity, class: 'form-control' %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :price %><br>
-    <%= f.text_field :price %>
+    <%= f.text_field :price, class: 'form-control' %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :last_ordered %><br>
-    <%= f.datetime_select :last_ordered %>
+    <%= f.text_field :last_ordered, :class => 'datepicker form-control' %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :stock_item %><br>
-    <%= f.check_box :stock_item %>
+    <%= f.check_box :stock_item, class: 'form-control' %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Save', class: 'btn btn-primary' %>
+    <%= link_to 'Cancel', widgets_path, class: 'btn btn-default' %>
   </div>
 <% end %>
