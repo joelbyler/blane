@@ -1,0 +1,32 @@
+<p>
+  <strong>Name:</strong>
+  <%= @widget.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @widget.description %>
+</p>
+
+<p>
+  <strong>Bulk quantity:</strong>
+  <%= @widget.bulk_quantity %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @widget.price %>
+</p>
+
+<p>
+  <strong>Last ordered:</strong>
+  <%= @widget.last_ordered %>
+</p>
+
+<p>
+  <strong>Stock item:</strong>
+  <%= @widget.stock_item %>
+</p>
+
+<%= link_to 'Edit', edit_widget_path(@widget) %> |
+<%= link_to 'Back', widgets_path %>

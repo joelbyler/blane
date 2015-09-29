@@ -1,0 +1,38 @@
+<div class="panel panel-default">
+  <div class="panel-heading">Here are our Widgets</div>
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Bulk quantity</th>
+          <th>Price</th>
+          <th>Last ordered</th>
+          <th>Stock item</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @widgets.each do |widget| %>
+          <tr>
+            <td><%= widget.name %></td>
+            <td><%= widget.description %></td>
+            <td><%= widget.bulk_quantity %></td>
+            <td><%= widget.price %></td>
+            <td><%= widget.last_ordered %></td>
+            <td><%= widget.stock_item %></td>
+            <td><%= link_to 'Show', widget %></td>
+            <td><%= link_to 'Edit', edit_widget_path(widget) %></td>
+            <td><%= link_to 'Destroy', widget, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<br>
+
+<%= link_to 'New Widget', new_widget_path, class: 'btn btn-primary' %>
